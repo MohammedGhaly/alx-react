@@ -1,4 +1,4 @@
-0x00. Webpack
+# Webpack
 
 `Front-end` `JavaScript` `ES6`
 
