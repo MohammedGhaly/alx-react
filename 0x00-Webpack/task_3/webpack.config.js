@@ -1,14 +1,47 @@
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "production",
+  plugins: [
+    new HTMLWebpackPlugin({
+      filename: "./index.html",
+    }),
+    new CleanWebpackPlugin(),
+  ],
+  devtool: "inline-source-map",
+  mode: "development",
   entry: {
-    main: path.resolve(__dirname, "./js/dashboard_main.js"),
+    header: {
+      import: "./modules/header/header.js",
+      dependOn: "shared",
+    },
+    body: {
+      import: "./modules/body/body.js",
+      dependOn: "shared",
+    },
+    footer: {
+      import: "./modules/footer/footer.js",
+      dependOn: "shared",
+    },
+    shared: "jquery",
   },
   output: {
     path: path.resolve(__dirname, "public"),
-    publicPath: "/public",
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
+  devServer: {
+    static: path.join(__dirname, "./public"),
+    open: true,
+    port: 8564,
+  },
+  performance: {
+    maxAssetSize: 1000000,
   },
   module: {
     rules: [
@@ -17,15 +50,15 @@ module.exports = {
         use: ["css-loader", "style-loader"],
       },
       {
-        test: /\.(?:ico|gif|png|jpeg|jpg|svg)$/i,
+        test: /\.(?:ico|gif|png|jpe?g|svg)$/i,
         type: "asset/resource",
         use: [
           "file-loader",
           {
             loader: "image-webpack-loader",
             options: {
-              disable: true,
               bypassingOnDebug: true,
+              disable: true,
             },
           },
         ],
@@ -33,4 +66,3 @@ module.exports = {
     ],
   },
 };
-
