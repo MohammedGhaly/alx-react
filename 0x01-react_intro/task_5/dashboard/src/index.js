@@ -1,3 +1,2 @@
-import $ from "jquery";
-
-$("body").append('<div id="simple">hello world</div>');
+const h = (document.createElement("h1").innerText = "Hello");
+document.body.append(h);

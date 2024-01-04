@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   devtool: "inline-source-map",
   entry: "./src/index.js",
   output: {
@@ -14,7 +14,7 @@ module.exports = {
     },
     hot: true,
     compress: true,
-    port: 8564,
+    port: 8080,
   },
   performance: {
     maxAssetSize: 1000000,
