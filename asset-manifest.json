@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/alx-react/tree/master/0x01-react_intro/task_4/dashboard/static/css/main.afe1dc8b.css",
+    "main.js": "/alx-react/tree/master/0x01-react_intro/task_4/dashboard/static/js/main.506a4267.js",
+    "static/js/787.1cd31a9e.chunk.js": "/alx-react/tree/master/0x01-react_intro/task_4/dashboard/static/js/787.1cd31a9e.chunk.js",
+    "static/media/Holberton_Logo.jpg": "/alx-react/tree/master/0x01-react_intro/task_4/dashboard/static/media/Holberton_Logo.24bab5d633e36ca8d17e.jpg",
+    "index.html": "/alx-react/tree/master/0x01-react_intro/task_4/dashboard/index.html",
+    "main.afe1dc8b.css.map": "/alx-react/tree/master/0x01-react_intro/task_4/dashboard/static/css/main.afe1dc8b.css.map",
+    "main.506a4267.js.map": "/alx-react/tree/master/0x01-react_intro/task_4/dashboard/static/js/main.506a4267.js.map",
+    "787.1cd31a9e.chunk.js.map": "/alx-react/tree/master/0x01-react_intro/task_4/dashboard/static/js/787.1cd31a9e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afe1dc8b.css",
+    "static/js/main.506a4267.js"
+  ]
+}
