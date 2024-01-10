@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "modules": "commonjs" }],
+    ["@babel/preset-react", { "runtime": "automatic" }]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-runtime"]
+    }
+  }
+}
+// {
+//   "presets": ["@babel/preset-react", "@babel/preset-env"]
+// }
