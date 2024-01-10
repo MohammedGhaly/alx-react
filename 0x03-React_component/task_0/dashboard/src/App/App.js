@@ -9,6 +9,24 @@ import { getLatestNotification } from "../utils/utils";
 import React from "react";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleKeyPressed = this.handleKeyPressed.bind(this);
+  }
+
+  handleKeyPress(e) {
+    if (e.ctrlKey && e.key === "h") {
+      alert("Logging you out");
+      this.props.logOut();
+    }
+  }
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyPress);
+  }
   listCourses = [
     { id: 1, name: "ES6", credit: 60 },
     { id: 2, name: "Webpack", credit: 20 },
@@ -45,9 +63,13 @@ class App extends React.Component {
 
 App.defaultProps = {
   isLoggedIn: false,
+  logOut: () => {
+    return;
+  },
 };
 App.propTypes = {
   isLoggedIn: PropTypes.bool,
+  logOut: PropTypes.func,
 };
 
 export default App;
