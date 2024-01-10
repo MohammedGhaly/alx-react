@@ -1,0 +1,29 @@
+li[data-notification-type="default"] {
+  color: blue;
+}
+
+li[data-notification-type="urgent"] {
+  color: red;
+}
+
+button {
+  background-color: #66666622;
+  border: 0px;
+  border-radius: 50%;
+}
+
+.Notifications {
+  border: 2px dotted #ff0000;
+  padding: 0 20px;
+  right: 10px;
+  width: 35%;
+  position: absolute;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.menuItem {
+  position: relative;
+  right: 10px;
+  text-align: right;
+}
