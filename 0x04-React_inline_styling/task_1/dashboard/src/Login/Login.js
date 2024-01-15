@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     padding: "2.4rem",
     borderBottom: "4px solid #e0354b",
     height: "40%",
+    margin: "5px",
   },
   AppBodyInput: {
     margin: "0 16px 0 8px",

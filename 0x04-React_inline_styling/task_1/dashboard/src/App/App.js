@@ -19,6 +19,11 @@ const styles = StyleSheet.create({
     fontSize: "1rem",
     padding: "2.4rem",
   },
+  footer: {
+    position: "absolute",
+    bottom: 0,
+    textAlign: "center",
+  },
 });
 
 class App extends Component {
