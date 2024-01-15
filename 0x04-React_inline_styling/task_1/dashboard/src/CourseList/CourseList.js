@@ -2,11 +2,26 @@ import React from "react";
 import CourseListRow from "./CourseListRow";
 import PropType from "prop-types";
 import CourseShape from "./CourseShape";
+import { StyleSheet, css } from "aphrodite";
+
+const styles = StyleSheet.create({
+  table: {
+    width: "60%",
+    borderCollapse: "collapse",
+    marginBottom: "20px",
+  },
+
+  th: {
+    border: "1px solid #000",
+    padding: "8px",
+    textAlign: "left",
+  },
+});
 
 const CourseList = ({ listCourses }) => {
   return (
-    <table id="CourseList">
-      <thead>
+    <table id="CourseList" className={css(styles.table)}>
+      <thead className={css(styles.th)}>
         <CourseListRow isHeader={true} textFirstCell="Available courses" />
         <CourseListRow
           isHeader={true}
