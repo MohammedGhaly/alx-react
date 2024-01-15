@@ -11,6 +11,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#66666622",
     border: "0px",
     borderRadius: "50%",
+    color: "#3a3a3a",
+    fontWeight: "bold",
+    background: "none",
+    fontSize: "15px",
+    position: "absolute",
+    right: "3px",
+    top: "3px",
+    cursor: "pointer",
+    outline: "none",
   },
   Notifications: {
     border: "2px dotted #ff0000",
@@ -49,24 +58,13 @@ class Notifications extends Component {
     const { displayDrawer, listNotifications } = this.props;
     return (
       <>
-        <div className="menuItem">
+        <div className={css(styles.menuItem)}>
           <p>Your notifications</p>
         </div>
         {displayDrawer ? (
-          <div className="Notifications">
+          <div className={css(styles.Notifications)}>
             <button
-              style={{
-                color: "#3a3a3a",
-                fontWeight: "bold",
-                background: "none",
-                border: "none",
-                fontSize: "15px",
-                position: "absolute",
-                right: "3px",
-                top: "3px",
-                cursor: "pointer",
-                outline: "none",
-              }}
+              className={css(styles.button)}
               aria-label="Close"
               onClick={(e) => {
                 console.log("Close button has been clicked");

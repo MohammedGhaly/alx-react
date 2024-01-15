@@ -67,11 +67,11 @@ describe("Testing the <Notifications /> Component", () => {
   });
 
   it("menu item is being displayed when displayDrawer is false", () => {
-    expect(wrapper.find(".menuItem")).toHaveLength(1);
+    expect(wrapper.find(".menuItem_fojwvh")).toHaveLength(1);
   });
 
   it("div.Notifications is not being displayed when displayDrawer is false", () => {
-    expect(wrapper.find(".Notifications")).toHaveLength(0);
+    expect(wrapper.find(".Notifications_9t0tok")).toHaveLength(0);
   });
 });
 
@@ -83,11 +83,11 @@ describe("Testing <Notification displayDrawer={true}/> ", () => {
   });
 
   it("menu item is being displayed when displayDrawer is true", () => {
-    expect(wrapper.find(".menuItem")).toHaveLength(1);
+    expect(wrapper.find(".menuItem_fojwvh")).toHaveLength(1);
   });
 
   it("div.Notifications is being displayed when displayDrawer is true", () => {
-    expect(wrapper.find(".Notifications")).toHaveLength(1);
+    expect(wrapper.find(".Notifications_9t0tok")).toHaveLength(1);
   });
 });
 
