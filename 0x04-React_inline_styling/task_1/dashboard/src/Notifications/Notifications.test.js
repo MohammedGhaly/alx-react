@@ -3,6 +3,10 @@ import { mount, shallow } from "enzyme";
 import Notifications from "./Notifications";
 import { getLatestNotification } from "../utils/utils";
 import { jest } from "@jest/globals";
+import { StyleSheetTestUtils } from "aphrodite";
+
+// Suppress style injection during tests
+StyleSheetTestUtils.suppressStyleInjection();
 
 describe("Testing the <Notifications /> Component", () => {
   let wrapper;
@@ -35,25 +39,25 @@ describe("Testing the <Notifications /> Component", () => {
   it("verify that the first NotificationItem element renders the right html", () => {
     wrapper.setProps({ displayDrawer: true });
     expect(wrapper.find("NotificationItem").first().html()).toEqual(
-      '<li data-notification-type="default">No new notification for now</li>'
+      '<li data-notification-type="default" class="defaultNotification_1ukqjkj">No new notification for now</li>'
     );
   });
 
   it("verify that Notifications renders correctly if you dont pass the listNotifications property or if you pass an empty array", () => {
     wrapper.setProps({ displayDrawer: true });
     expect(wrapper.find("NotificationItem").first().html()).toEqual(
-      '<li data-notification-type="default">No new notification for now</li>'
+      '<li data-notification-type="default" class="defaultNotification_1ukqjkj">No new notification for now</li>'
     );
     wrapper.setProps({ displayDrawer: true, listNotifications: [] });
     expect(wrapper.find("NotificationItem").first().html()).toEqual(
-      '<li data-notification-type="default">No new notification for now</li>'
+      '<li data-notification-type="default" class="defaultNotification_1ukqjkj">No new notification for now</li>'
     );
   });
 
   it("verify that when listNotifications is empty the message Here is the list of notifications is not displayed, but No new notification for now is", () => {
     wrapper.setProps({ displayDrawer: true, listNotifications: [] });
     expect(wrapper.find("NotificationItem").first().html()).toEqual(
-      '<li data-notification-type="default">No new notification for now</li>'
+      '<li data-notification-type="default" class="defaultNotification_1ukqjkj">No new notification for now</li>'
     );
     expect(
       wrapper.findWhere((node) => {
