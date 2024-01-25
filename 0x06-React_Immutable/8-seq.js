@@ -3,22 +3,21 @@ import { Seq } from 'immutable';
 export default function printBestStudents(object) {
   const seq = Seq(object);
 
-  const filtered = seq.filter((s) => {
-    return s.score > 70;
+  const filtered = seq.filter((student) => {
+    return student.score > 70;
   });
 
   function capFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  const obj = filtered.toJS();
+  const JSObject = filtered.toJS();
 
-  Object.keys(obj).map((key) => {
-    obj[key].firstName = capFirstLetter(obj[key].firstName);
-    obj[key].lastName = capFirstLetter(obj[key].lastName);
-
-    return obj[key];
+  Object.keys(JSObject).map((key) => {
+    JSObject[key].firstName = capFirstLetter(JSObject[key].firstName);
+    JSObject[key].lastName = capFirstLetter(JSObject[key].lastName);
+    return JSObject[key];
   });
 
-  console.log(obj);
+  console.log(JSObject);
 }
