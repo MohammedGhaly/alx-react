@@ -16,6 +16,7 @@ export default function printBestStudents(object) {
   Object.keys(obj).map((key) => {
     obj[key].firstName = capFirstLetter(obj[key].firstName);
     obj[key].lastName = capFirstLetter(obj[key].lastName);
+
     return obj[key];
   });
 
