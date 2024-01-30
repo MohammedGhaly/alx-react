@@ -94,6 +94,7 @@ class App extends Component {
     const { listNotifications, user, listCourses, logOut } = this.state;
     const value = { user, logOut };
     const { isLoggedIn } = user;
+    getAllNotificationsByUser("5debd764a7c57c7839d722e9");
     return (
       <appContext.Provider value={value}>
         <Notifications
