@@ -1,15 +1,13 @@
-# 0x05-React_State
+# 0x02-react_props
 
 ## Description:bulb:
 
-- What the state of a component or a container is
-- The lifecycle of a component
-- How to modify a state and execute code in the right order
-- What a controlled component is
-- How to use Forms in React
-- How to reuse smaller components, keep them pure, and lift its state to principal containers
-- The use of a React Hook and how to create one
-- How to test State changes with Enzyme
+- How to create basic React components using functions
+- How to reuse components
+- How to pass properties to components
+- How to define types for components
+- How to use Fragments
+- When to use a key to improve a loop’s performance
 
 ## Technologies & Tools:computer:
 
@@ -31,5 +29,5 @@
 
 ## Resources
 
-- [State and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
-- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Getting started with React](https://www.taniarascia.com/getting-started-with-react/)
+- [React Official Website](https://reactjs.org/)
