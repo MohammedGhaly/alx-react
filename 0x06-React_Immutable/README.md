@@ -20,6 +20,6 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 ## Resources
 
-- [Immutable Object concept](https://intranet.alxswe.com/rltoken/C34VL1Db887N_zzjmpOU_w)
-- [Immutable.js Documentation](https://intranet.alxswe.com/rltoken/oDyg_FOCdEEcLfpNnSMWmg)
-- [Immutable.js GitHub](https://intranet.alxswe.com/rltoken/Za6PJtr1M59G7ktu5D_X3g)
+- [Immutable Object concept](https://en.wikipedia.org/wiki/Immutable_object)
+- [Immutable.js Documentation](https://immutable-js.com/docs/v4.3.5/)
+- [Immutable.js GitHub](https://github.com/immutable-js/immutable-js)
